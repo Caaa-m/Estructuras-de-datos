@@ -1,0 +1,27 @@
+//Escribir una función que imprima una matriz por filas.
+#include <iostream>
+using namespace std;
+
+void imprimirMatriz(int matriz[][10], int filas, int columnas) {
+    for (int i = 0; i < filas; i++) {
+        for (int j = 0; j < columnas; j++) {
+            cout << matriz[i][j] << "\t";
+        }
+        cout << endl;
+    }
+}
+
+int main() {
+    int matriz[3][10] = {
+        {1, 2, 3, 4, 5, 6, 7, 8, 9, 10},
+        {11, 12, 13, 14, 15, 16, 17, 18, 19, 20},
+        {21, 22, 23, 24, 25, 26, 27, 28, 29, 30}
+    };
+
+    int filas = 3, columnas = 10;
+
+    cout << "Matriz por filas:" << endl;
+    imprimirMatriz(matriz, filas, columnas);
+
+    return 0;
+}
